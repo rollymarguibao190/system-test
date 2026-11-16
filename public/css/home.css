@@ -1,0 +1,77 @@
+/* ===== Home page styles — loaded by home.blade.php via @push('styles') ===== */
+
+/* ----- hero ----- */
+.hero{background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 60%,var(--green-light) 100%);
+      color:#fff;padding:72px 0 88px;overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.hero-tag{display:inline-block;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.8px;
+          text-transform:uppercase;background:rgba(245,197,24,.15);color:var(--gold);border:1px solid rgba(245,197,24,.35)}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,58px);line-height:1.1;margin:18px 0}
+.hero .lead{font-size:18px;color:rgba(255,255,255,.85);max-width:540px;margin-bottom:28px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ----- slider ----- */
+.slider{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);
+        border:1px solid rgba(255,255,255,.18);outline-offset:4px}
+.slider:focus-visible{outline:3px solid var(--gold)}
+.slides{display:flex;transition:transform .55s ease}
+.slide{min-width:100%;min-height:340px;padding:40px 36px 64px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.slide-emoji{font-size:64px;line-height:1}
+.slide h3{font-family:'Playfair Display',serif;font-size:28px}
+.slide p{max-width:360px;opacity:.92}
+.slide--academic {background:linear-gradient(135deg,#0d6e32,#063d1c)}
+.slide--cultural {background:linear-gradient(135deg,#7a2e8e,#3d1450)}
+.slide--sports   {background:linear-gradient(135deg,#0369a1,#063a5e)}
+.slide--community{background:linear-gradient(135deg,#b45309,#6b3005)}
+
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;
+            border:none;background:rgba(255,255,255,.92);color:var(--green-dark);font-size:26px;line-height:1;
+            cursor:pointer;display:grid;place-items:center;transition:all .15s}
+.slider-btn:hover{background:var(--gold)}
+.slider-btn.prev{left:12px}
+.slider-btn.next{right:12px}
+.slider-dots{position:absolute;left:0;right:0;bottom:18px;display:flex;justify-content:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,.45);transition:all .2s;padding:0}
+.dot.active{background:var(--gold);width:28px;border-radius:6px}
+
+/* ----- sections ----- */
+.section{padding:80px 0}
+.section-alt{background:var(--green-soft)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green-light);margin-bottom:8px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);color:var(--green-dark);line-height:1.2}
+.section-head{text-align:center;margin-bottom:44px}
+.intro{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start}
+.intro p{color:var(--muted);font-size:17px;margin-bottom:22px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:7px 16px;border-radius:999px;font-size:13px;font-weight:600;background:var(--gold-soft);
+      color:var(--gold-dark);border:1px solid rgba(212,165,16,.35)}
+
+/* ----- feature cards ----- */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px 24px;transition:all .25s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--green)}
+.card-icon{width:54px;height:54px;border-radius:12px;display:grid;place-items:center;font-size:26px;
+           background:var(--green-soft);margin-bottom:16px}
+.card h3{font-size:18px;color:var(--green-dark);margin-bottom:6px}
+.card p{color:var(--muted);font-size:14.5px}
+
+/* ----- call to action ----- */
+.cta{background:var(--green-dark);color:#fff;text-align:center;padding:64px 0}
+.cta h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,34px);margin-bottom:10px}
+.cta p{color:rgba(255,255,255,.8);margin-bottom:24px}
+
+/* ----- responsive ----- */
+@media (max-width:960px){
+  .hero-inner,.intro{grid-template-columns:1fr}
+  .cards{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:560px){
+  .hero{padding:48px 0 56px}
+  .section{padding:56px 0}
+  .cards{grid-template-columns:1fr}
+  .slide{min-height:300px;padding:32px 24px 60px}
+}
+@media (prefers-reduced-motion:reduce){
+  .slides{transition:none}
+  html{scroll-behavior:auto}
+}
