@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lara-Proj-SECTION-Surname1-Surname2-Surname3
 
 > **Group name:** _(your group name)_
@@ -40,3 +41,6 @@ php artisan migrate        # answer "yes" if asked to create the database
 php artisan serve          # open http://127.0.0.1:8000
 ```
 Requires PHP 8.2+ and Composer. No `npm` step is needed: pages load plain CSS/JS from `public/`.
+=======
+# system-test
+>>>>>>> 601e7fd5761765aec229edc2e4c1d945bcd27cb4
